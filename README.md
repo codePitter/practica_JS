@@ -1,4 +1,4 @@
-# practica_JS
+# Practica_JS
 Curso práctico de JS en Platzi
 ...
 ## Taller #1: Figuras geométricas
