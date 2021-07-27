@@ -60,3 +60,20 @@ function superficieCirculo(radioC){
 /*console.log("Lasuperficie del círculo es: " + superficieCirculo + " cm²");
 
 console.groupEnd();*/
+
+// funciones para el HTML
+function calcularPerimetroCuadrado(){
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+
+    const perimetro = perimetroCuadrado(value);
+    alert(perimetro);
+};
+
+function calcularSuperficieCuadrado(){
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+
+    const perimetro = superficieCuadrado(value);
+    alert(perimetro);
+};

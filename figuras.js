@@ -41,3 +41,4 @@ const superficieCirculo = Math.round((radioCirculo * radioCirculo) * Math.PI * 1
 console.log("Lasuperficie del círculo es: " + superficieCirculo + " cm²");
 
 console.groupEnd();
+
