@@ -42,12 +42,12 @@
                     <label for="InputCuadrado">
                         <p class="card-text">Escribe cuánto mide cada lado de tu cuadrado</p>
                     </label>
-                    <input id="InputCuadrado" type="number" class="form-control form-control-sm my-2"/>
+                    <input id="InputCuadrado" type="number" placeholder="Lado del cuadrado" class="form-control form-control-sm my-2"/>
                     <div class="btn-group">
-                        <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148);" onclick="calcularPerimetroCuadrado()">
+                        <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148); border: 1px solid purple;" onclick="calcularPerimetroCuadrado()">
                             Calcular el perímetro
                         </button>
-                        <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148);" onclick="calcularSuperficieCuadrado()">
+                        <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148); border: 1px solid purple;" onclick="calcularSuperficieCuadrado()">
                             Calcular la superficie
                         </button>
                     </div>
@@ -57,19 +57,23 @@
         <div class="card col-sm-4 mx-auto mb-4" style="max-width: 350px; background-color: #ffffff;
         "
         ">
-            <img class="card-img-top mt-3" src="/asset/image/triangle.png" alt="square">
+            <img class="card-img-top mt-3" src="/asset/image/triangle.png" alt="triangle">
             <div class="card-body mx-auto p-0">
-                <h5 class="card-title">Calcula la superficie y el perímetro de un cuadrado</h5>
+                <h5 class="card-title">Calcula la superficie y el perímetro de un triángulo</h5>
                 <form action="">
-                    <label for="InputCuadrado">
-                        <p class="card-text">Escribe cuánto mide cada lado de tu cuadrado</p>
+                    <label for="">
+                        <p class="card-text">Escribe cuánto mide cada lado de tu triángulo</p>
                     </label>
-                    <input id="InputCuadrado" type="number" class="form-control form-control-sm my-2"/>
+                    <div class="input-group">
+                        <input id="lado1" type="number" placeholder="Lado 1" class="form-control form-control-sm my-2"/>
+                        <input id="lado2" type="number" placeholder="Lado 2" class="form-control form-control-sm my-2"/>
+                        <input id="lado3" type="number" placeholder="Lado 3" class="form-control form-control-sm my-2"/>
+                    </div>
                     <div class="btn-group">
-                        <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148);" onclick="calcularPerimetroCuadrado()">
+                        <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148); border: 1px solid purple;" onclick="calcularPerimetroTriangulo()">
                             Calcular el perímetro
                         </button>
-                        <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148);" onclick="calcularSuperficieCuadrado()">
+                        <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148); border: 1px solid purple;" onclick="calcularSuperficieTriangulo()">
                             Calcular la superficie
                         </button>
                     </div>
@@ -77,19 +81,19 @@
             </div>
         </div>
         <div class="card col-sm-4 mx-auto mb-4" style="max-width: 350px; background-color: #ffffff;">
-            <img class="card-img-top mt-3" src="/asset/image/circle.png" alt="square">
+            <img class="card-img-top mt-3" src="/asset/image/circle.png" alt="circle">
             <div class="card-body mx-auto p-0">
-                <h5 class="card-title">Calcula la superficie y el perímetro de un cuadrado</h5>
+                <h5 class="card-title">Calcula la superficie y la circunsferencia de un círculo</h5>
                 <form action="">
-                    <label for="InputCuadrado">
-                        <p class="card-text">Escribe cuánto mide cada lado de tu cuadrado</p>
+                    <label for="radio">
+                        <p class="card-text">Escribe cuánto mide el radio del círculo</p>
                     </label>
-                    <input id="InputCuadrado" type="number" class="form-control form-control-sm my-2"/>
+                    <input id="radio" type="number" placeholder="Radio del círculo" class="form-control form-control-sm my-2"/>
                     <div class="btn-group">
-                        <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148);" onclick="calcularPerimetroCuadrado()">
-                            Calcular el perímetro
+                        <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148); border: 1px solid purple;" onclick="calcularCircunsferenciaCirculo()">
+                            Calcular la circunsferencia
                         </button>
-                        <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148);" onclick="calcularSuperficieCuadrado()">
+                        <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148); border: 1px solid purple;" onclick="calcularSuperficieCirculo()">
                             Calcular la superficie
                         </button>
                     </div>
