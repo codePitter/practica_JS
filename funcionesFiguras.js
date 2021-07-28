@@ -1,3 +1,5 @@
+//Js del index.html
+
 function perimetroCuadrado(lado){
     return lado * 4;
 };
