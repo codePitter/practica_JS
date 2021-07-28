@@ -27,7 +27,7 @@
         max-width: 60%;
         border-radius: 10px;
         padding: 0;
-        margin: 20px auto ;
+        margin: 10px auto ;
     ">
       <h1 class="display-4 my-0">Figuras geométricas</h1>
       <p class="h2">Este es el primer taller del curso prático de JS</p>
@@ -40,9 +40,9 @@
                 <h5 class="card-title">Calcula la superficie y el perímetro de un cuadrado</h5>
                 <form action="">
                     <label for="InputCuadrado">
-                        <p class="card-text">Escribe cuánto mide cada lado de tu cuadrado</p>
+                        <p class="card-text">¿Cuánto cm mide cada lado de tu cuadrado?</p>
                     </label>
-                    <input id="InputCuadrado" type="number" placeholder="Lado del cuadrado" class="form-control form-control-sm my-2"/>
+                    <input id="InputCuadrado" type="number" placeholder="Lado del cuadrado" class="form-control form-control-sm text-center my-2"/>
                     <div class="btn-group">
                         <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148); border: 1px solid purple;" onclick="calcularPerimetroCuadrado()">
                             Calcular el perímetro
@@ -50,6 +50,10 @@
                         <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148); border: 1px solid purple;" onclick="calcularSuperficieCuadrado()">
                             Calcular la superficie
                         </button>
+                    </div>
+                    <div class="input-group">
+                        <div id="resultadoPerimetroCuadrado" class="text-white text-center bg-primary border border-dark form-control form-control-sm my-2 px-0 py-1 d-inline"></div>
+                        <div id="resultadoSuperficieCuadrado" class="text-white text-center bg-primary border border-dark form-control form-control-sm my-2 px-0 py-1 d-inline"></div>
                     </div>
                 </form>
             </div>
@@ -62,12 +66,12 @@
                 <h5 class="card-title">Calcula la superficie y el perímetro de un triángulo</h5>
                 <form action="">
                     <label for="">
-                        <p class="card-text">Escribe cuánto mide cada lado de tu triángulo</p>
+                        <p class="card-text">¿Cuánto mide cada lado de tu triángulo?</p>
                     </label>
                     <div class="input-group">
-                        <input id="lado1" type="number" placeholder="Lado 1" class="form-control form-control-sm my-2"/>
-                        <input id="lado2" type="number" placeholder="Lado 2" class="form-control form-control-sm my-2"/>
-                        <input id="lado3" type="number" placeholder="Lado 3" class="form-control form-control-sm my-2"/>
+                        <input id="lado1" type="number" placeholder="Lado 1" class="form-control form-control-sm text-center my-2"/>
+                        <input id="lado2" type="number" placeholder="Lado 2" class="form-control form-control-sm text-center my-2"/>
+                        <input id="lado3" type="number" placeholder="Lado 3" class="form-control form-control-sm text-center my-2"/>
                     </div>
                     <div class="btn-group">
                         <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148); border: 1px solid purple;" onclick="calcularPerimetroTriangulo()">
@@ -77,6 +81,11 @@
                             Calcular la superficie
                         </button>
                     </div>
+                    <div class="input-group">
+                        <div id="resultadoPerimetroTriangulo" class="text-white text-center bg-primary border border-dark form-control form-control-sm my-2 px-0 py-1 d-inline"></div>
+                        <div id="resultadoSuperficieTriangulo" class="text-white text-center bg-primary border border-dark form-control form-control-sm my-2 px-0 py-1 d-inline"></div>
+                    </div>
+
                 </form>
             </div>
         </div>
@@ -86,9 +95,9 @@
                 <h5 class="card-title">Calcula la superficie y la circunsferencia de un círculo</h5>
                 <form action="">
                     <label for="radio">
-                        <p class="card-text">Escribe cuánto mide el radio del círculo</p>
+                        <p class="card-text">¿Cuánto mide el radio del círculo?</p>
                     </label>
-                    <input id="radio" type="number" placeholder="Radio del círculo" class="form-control form-control-sm my-2"/>
+                    <input id="radio" type="number" placeholder="Radio del círculo" class="form-control form-control-sm text-center my-2"/>
                     <div class="btn-group">
                         <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148); border: 1px solid purple;" onclick="calcularCircunsferenciaCirculo()">
                             Calcular la circunsferencia
@@ -97,6 +106,11 @@
                             Calcular la superficie
                         </button>
                     </div>
+                    <div class="input-group">
+                        <div id="resultadoCircunsferencia" class="text-white text-center bg-primary border border-dark form-control form-control-sm my-2 px-0 py-1 d-inline"></div>
+                        <div id="resultadoSuperficieCirculo" class="text-white text-center bg-primary border border-dark form-control form-control-sm my-2 px-0 py-1 d-inline"></div>
+                    </div>
+
                 </form>
             </div>
         </div>

@@ -14,15 +14,16 @@ function calcularPerimetroCuadrado(){
     const value = input.value;
 
     const perimetro = perimetroCuadrado(value);
-    alert(perimetro);
+    console.log(perimetro);
+    document.getElementById('resultadoPerimetroCuadrado').innerHTML = "Perímetro = " + perimetro + " cm";
 };
 
 function calcularSuperficieCuadrado(){
     const input = document.getElementById("InputCuadrado");
     const value = input.value;
 
-    const perimetro = superficieCuadrado(value);
-    alert(perimetro);
+    const superficie = superficieCuadrado(value);
+    document.getElementById('resultadoSuperficieCuadrado').innerHTML = "Área = " + superficie + " cm²";
 };
 //Triángulo
 function calcularPerimetroTriangulo(){
@@ -30,7 +31,7 @@ function calcularPerimetroTriangulo(){
     const ladoB = document.getElementById("lado2").value;
     const ladoC = document.getElementById("lado3").value;
     const perimetro = Number(ladoA) + Number(ladoB) + Number(ladoC);
-    alert(perimetro);
+    document.getElementById('resultadoPerimetroTriangulo').innerHTML = "Perímetro = " + perimetro + " cm";
 };
 
 //función altura del triángulo
@@ -41,36 +42,36 @@ function calcularSuperficieTriangulo(){
     if(lado1 === lado2 && lado1 === lado3){
         const base = lado1;
         const ladoA = lado2;
-        const alturaTEquilatero = Math.sqrt((3 * ladoA) / 2);
+        const alturaTEquilatero = Math.round(Math.sqrt((3 * ladoA) / 2));
         const superficieTequilatero = (base * alturaTEquilatero) / 2;
-        alert("Es un triángulo equilatero y su superficie es de: " + superficieTequilatero + " cm²");
+        document.getElementById('resultadoSuperficieTriangulo').innerHTML = "Área Equilatero = " + superficieTequilatero + " cm²";
     }else if(lado1 === lado2){
         var base = lado3;
         var ladoA = lado1;
         var ladoB = lado2;
-        const alturaT = Math.sqrt((ladoA * ladoB)-((base * base)/4));
+        const alturaT = Math.round(Math.sqrt((ladoA * ladoB)-((base * base)/4)));
         const superficieT = (base * alturaT) / 2;
-        alert("Es un triángulo isóceles y su superficie es de: " + superficieT + " cm²");
+        document.getElementById('resultadoSuperficieTriangulo').innerHTML = "Área Isosceles = " + superficieT + " cm²";
     
     }else if(lado2 === lado3){
         var base = lado1;
         var ladoA = lado2;
         var ladoB = lado3;
-        const alturaT = Math.sqrt((ladoA * ladoB)-((base * base)/4));
+        const alturaT = Math.round(Math.sqrt((ladoA * ladoB)-((base * base)/4)));
         const superficieT = (base * alturaT) / 2;
-        alert("Es un triángulo isóceles y su superficie es de: " + superficieT + " cm²");
+        document.getElementById('resultadoSuperficieTriangulo').innerHTML = "Área Isosceles = " + superficieT + " cm²";
     
     }else if(lado1 === lado3){
         var base = lado2;
         var ladoA = lado1;
         var ladoB = lado3;
-        const alturaT = Math.sqrt((ladoA * ladoB)-((base * base)/4));
+        const alturaT = Math.round(Math.sqrt((ladoA * ladoB)-((base * base)/4)));
         const superficieT = (base * alturaT) / 2;
-        alert("Es un triángulo isóceles y su superficie es de: " + superficieT + " cm²");
+        document.getElementById('resultadoSuperficieTriangulo').innerHTML = "Área Isosceles = " + superficieT + " cm²";
     }else {
         var perimetroTEscaleno = Number(lado1) + Number(lado2) + Number(lado3);
-        const superficieTEscaleno = Math.sqrt((perimetroTEscaleno / 2) * ((perimetroTEscaleno / 2) - Number(lado1)) * ((perimetroTEscaleno / 2) - Number(lado2)) * ((perimetroTEscaleno / 2) - Number(lado3)))
-        alert("Es un triángulo escaleno y su superficie es de: " + superficieTEscaleno + " cm²");
+        const superficieTEscaleno = Math.round((Math.sqrt((perimetroTEscaleno / 2) * ((perimetroTEscaleno / 2) - Number(lado1)) * ((perimetroTEscaleno / 2) - Number(lado2)) * ((perimetroTEscaleno / 2) - Number(lado3))))*100) / 100;
+        document.getElementById('resultadoSuperficieTriangulo').innerHTML = "Área Escaleno = " + superficieTEscaleno + " cm²";
     };
 };
 
@@ -78,11 +79,11 @@ function calcularSuperficieTriangulo(){
 function calcularCircunsferenciaCirculo(){
     const radioC = document.getElementById("radio").value;
     const circunsferencia = Math.round((Number(radioC) + Number(radioC)) * Math.PI *100) / 100;
-    alert(circunsferencia);
+    document.getElementById('resultadoCircunsferencia').innerHTML = "Circunsf. = " + circunsferencia + " cm";
 };
 
 function calcularSuperficieCirculo(){
     const radioC = document.getElementById("radio").value;
     const superficieC = Math.round((Number(radioC) * Number(radioC)) * Math.PI * 100) / 100;
-    alert(superficieC);
+    document.getElementById('resultadoSuperficieCirculo').innerHTML = "Área = " + superficieC + " cm²";
 };
