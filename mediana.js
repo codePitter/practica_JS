@@ -8,13 +8,13 @@ const lista1 = [
 const  mitadLista1 = parseInt(lista1.length / 2);
 let mediana;
 
-function esPar(numerito){
-    if(numerito % 2 === 0){
-        return true
-    }else{
-        return false
-    }
-};
+    function esPar(numerito){
+        if(numerito % 2 === 0){
+            return true
+        }else{
+            return false
+        }
+    };
 
 if(esPar(lista1.length)){ //necesitamos saber si nuestra lista es par
     const elemento1 = lista1[mitadLista1 - 1];
