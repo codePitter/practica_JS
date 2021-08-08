@@ -1,0 +1,10 @@
+.divPersonalizado{
+    height: 2rem;
+    border: 1px solid black;
+    margin-top: 10px;
+    width: 70%;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+};
+
