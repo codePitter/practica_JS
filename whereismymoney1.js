@@ -1,3 +1,65 @@
+function mesActualSelected(){
+    const localDate = new Date();
+    const months = [
+    'Enero',
+    'Febrero',
+    'Marzo',
+    'Abril',
+    'Mayo',
+    'Junio',
+    'Julio',
+    'Agosto',
+    'Septiembre',
+    'Octubre',
+    'Noviembre',
+    'Diciembre',
+    ];
+    let currentMonth = months[localDate.getMonth()];
+    //document.getElementById('thisMonth').innerHTML = currentMonth;
+    switch(currentMonth){
+        case months[0]:
+            document.getElementById('mes1').selected = "true";
+        break;
+        case months[1]:
+            document.getElementById('mes2').selected = "true";
+        break;
+        case months[2]:
+            document.getElementById('mes3').selected = "true";
+        break;
+        case months[3]:
+            document.getElementById('mes4').selected = "true";
+        break;
+        case months[4]:
+            document.getElementById('mes5').selected = "true";
+        break;
+        case months[5]:
+            document.getElementById('mes6').selected = "true";
+        break;
+        case months[6]:
+            document.getElementById('mes7').selected = "true";
+        break;
+        case months[7]:
+            document.getElementById('mes8').selected = "true";
+        break;
+        case months[8]:
+            document.getElementById('mes9').selected = "true";
+        break;
+        case months[9]:
+            document.getElementById('mes10').selected = "true";
+        break;
+        case months[10]:
+            document.getElementById('mes11').selected = "true";
+        break;
+        case months[11]:
+            document.getElementById('mes12').selected = "true";
+        break;
+
+    }
+}
+function selectCurrentMonth() {
+    document.getElementById("orange").selected = "true";
+  }
+
 function totalInvertido(){
     const resultInvercion = Number(inv1.value) + Number(inv2.value) +Number(inv3.value) +Number(inv4.value) +Number(inv5.value) +Number(inv6.value);
     return resultInvercion;

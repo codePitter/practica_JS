@@ -7,6 +7,7 @@ function muestra_oculta(id){
 };
 
 window.onload = function(){
+    mesActualSelected();
     /*hace que se cargue la función lo que predetermina que div estará oculto hasta llamar a la función nuevamente*/
     muestra_oculta('addInversion1');
     muestra_oculta('addInversion2');
@@ -22,7 +23,7 @@ window.onload = function(){
     /* "contenido_a_mostrar" es el nombre que le dimos al DIV */
 };
 
-function Theme(id1, id2, id3, id4){
+function Theme(id1, id2, id3, id4, id5){
     if(document.getElementById){
         let elemento = document.getElementById(id1);
         elemento.style.background = (elemento.style.background == '') ? '#353535' : '';
@@ -37,6 +38,10 @@ function Theme(id1, id2, id3, id4){
     }
     if(document.getElementById){
         let elemento = document.getElementById(id4);
+        elemento.style.color = (elemento.style.color == '') ? '#dedede' : '';
+    }
+    if(document.getElementById){
+        let elemento = document.getElementById(id5);
         elemento.style.color = (elemento.style.color == '') ? '#dedede' : '';
     }
 
