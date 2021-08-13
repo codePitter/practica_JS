@@ -90,16 +90,26 @@ function procesarInversion(){
         }
     );
     return resultadodelainversion;
-}
+};
 
 function ahorroEinversion(){
     const resultado = (Number(sueldo.value) + Number(totalInvertido()) + Number(procesarInversion()) + Number(totalAhorro())) - Number(capital.value);
     document.getElementById('inMensual').innerHTML = parseInt(resultado);
-    console.log(capital.value);
-    console.log(totalInvertido());
-    console.log(procesarInversion());
-    console.log(totalAhorro());
+};
 
+function procesarInversionShow(){
+    capturarArrayInv();
+    arrayInv = [];
+
+    for( let i = 0; i < arrayInversion.length ; i++){
+        arrayInv[i] = (arrayInversion[i].inv * arrayInversion[i].rendInv) /100;
+    };
+    const resultadodelainversion = arrayInv.reduce(
+        function (a, b){
+            return a + b;
+        }
+    );
+    document.getElementById('TotGanancia').innerHTML = resultadodelainversion;
 };
 
 function arrayInversionSorted(){
@@ -109,7 +119,7 @@ function arrayInversionSorted(){
         }
     )
     return arrayISorted;
-}
+};
 
 function arrayInvFiltered(){
     arrayInversionSorted();
@@ -125,14 +135,14 @@ function arrayInvFiltered(){
     }
     arrayPorInv = arrayInversion.filter(filterByInv);
     return arrayPorInv;    
-}
+};
 
 function sumaArrayInv(){ 
     let suma = 0;
     for(let i = 0; i < arrayInversion.length; i++){
         suma += arrayInversion[i].inv;        
     }
-    return suma;
+    document.getElementById('TotInvertido').innerHTML = suma;
 };
 
 function promedioDeInversion(){
@@ -158,6 +168,12 @@ function totalAhorro(){
     return result.ahorro;   
 };
 
+function totalAhorroShow(){
+    capturarArrayAhorro();
+    const result = arrayAhorro.reduce((a, b) => ({ ahorro: a.ahorro + b.ahorro }));
+    document.getElementById('TotAhorro').innerHTML = result.ahorro;   
+};
+
 function ArrayAhorroSorted(){
     arrayAhorro.sort(
         function(a, b){
@@ -173,4 +189,4 @@ function InvertidoVsAhorro(){
     console.log(resultado);
     document.getElementById('InvertidoVsAhorro').innerHTML = Math.round(resultado * 100) / 100 + "%";
     console.log(typeof(resultado));
-}
+};
