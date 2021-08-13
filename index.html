@@ -1,135 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Booststrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css">
-    <style>
-        .btn:hover{
-            background-color: rgb(252, 129, 129) !important;
-            color: white;
-        };
-    </style>
-    <title>Figuras geométricas | Curso Práctio JS</title>
-  </head>
-  <body class="row" style="
-    background-color: #4158D0;
-    background-image:url(/asset/image/3509903.jpg);
-    background-position: center;
-    background-size: contain;
-    max-width: 100%;
-    height: 100vh;
-    ">
-    <header id="encabezado" class="col-sm-12 text-center" style="
-        background-color: #ffffffc7;
-        max-width: 50vw;
-        border-radius: 10px;
-        padding: 0;
-        margin:auto;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    ">
-      <h1 class="display-4 my-2">Figuras geométricas</h1>
-      <p class="h2 mb-4">Este es el primer taller del curso prático de JS</p>
-    </header>
-    <div class="container row col-sm-12 mx-auto mb-1 px-3 my-5">
-        <div class="card mx-auto mb-4" style="max-width: 350px; max-height: 450px; background-color: #ffffff;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
-            <img class="card-img-top mt-3" src="/asset/image/square.png" alt="square">
-            <div class="card-body mx-auto p-0">
-                <h5 class="card-title">Calcula la superficie y el perímetro de un cuadrado</h5>
-                <form action="">
-                    <label for="InputCuadrado">
-                        <p class="card-text">¿Cuánto cm mide cada lado de tu cuadrado?</p>
-                    </label>
-                    <input id="InputCuadrado" type="number" placeholder="Lado del cuadrado" class="form-control form-control-sm text-center my-2"/>
-                    <div class="btn-group">
-                        <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148); border: 1px solid purple;" onclick="calcularPerimetroCuadrado()">
-                            Calcular el perímetro
-                        </button>
-                        <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148); border: 1px solid purple;" onclick="calcularSuperficieCuadrado()">
-                            Calcular la superficie
-                        </button>
-                    </div>
-                    <div class="input-group">
-                        <div id="resultadoPerimetroCuadrado" class="text-white text-center bg-primary border border-dark form-control form-control-sm my-2 px-0 py-1 d-inline"></div>
-                        <div id="resultadoSuperficieCuadrado" class="text-white text-center bg-primary border border-dark form-control form-control-sm my-2 px-0 py-1 d-inline"></div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="card mx-auto mb-4" style="max-width: 350px; max-height: 450px; background-color: #ffffff;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-        ">
-            <img class="card-img-top mt-3" src="/asset/image/triangle.png" alt="triangle">
-            <div class="card-body mx-auto p-0">
-                <h5 class="card-title">Calcula la superficie y el perímetro de un triángulo</h5>
-                <form action="">
-                    <label for="">
-                        <p class="card-text">¿Cuánto mide cada lado de tu triángulo?</p>
-                    </label>
-                    <div class="input-group">
-                        <input id="lado1" type="number" placeholder="Lado 1" class="form-control form-control-sm text-center my-2"/>
-                        <input id="lado2" type="number" placeholder="Lado 2" class="form-control form-control-sm text-center my-2"/>
-                        <input id="lado3" type="number" placeholder="Lado 3" class="form-control form-control-sm text-center my-2"/>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148); border: 1px solid purple;" onclick="calcularPerimetroTriangulo()">
-                            Calcular el perímetro
-                        </button>
-                        <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148); border: 1px solid purple;" onclick="calcularSuperficieTriangulo()">
-                            Calcular la superficie
-                        </button>
-                    </div>
-                    <div class="input-group">
-                        <div id="resultadoPerimetroTriangulo" class="text-white text-center bg-primary border border-dark form-control form-control-sm my-2 px-0 py-1 d-inline"></div>
-                        <div id="resultadoSuperficieTriangulo" class="text-white text-center bg-primary border border-dark form-control form-control-sm my-2 px-0 py-1 d-inline"></div>
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Curso prático de JS</title>
+</head>
+<body>
+    <h1>Talleres del Curso práctico de JavaScript</h1>
+    <p>Estos retos fueron desarrollados por Pedro Quiroga</p>
 
-                </form>
-            </div>
-        </div>
-        <div class="card mx-auto mb-4" style="max-width: 350px; max-height: 450px; background-color: #ffffff;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
-            <img class="card-img-top mt-3" src="/asset/image/circle.png" alt="circle">
-            <div class="card-body mx-auto p-0">
-                <h5 class="card-title">Calcula la superficie y la circunsferencia de un círculo</h5>
-                <form action="">
-                    <label for="radio">
-                        <p class="card-text">¿Cuánto mide el radio de tu círculo?</p>
-                    </label>
-                    <input id="radio" type="number" placeholder="Radio del círculo" class="form-control form-control-sm text-center my-2"/>
-                    <div class="btn-group">
-                        <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148); border: 1px solid purple;" onclick="calcularCircunsferenciaCirculo()">
-                            Calcular la circunsferencia
-                        </button>
-                        <button type="button" class="btn my-2" style="background-color: rgb(250, 248, 148); border: 1px solid purple;" onclick="calcularSuperficieCirculo()">
-                            Calcular la superficie
-                        </button>
-                    </div>
-                    <div class="input-group">
-                        <div id="resultadoCircunsferencia" class="text-white text-center bg-primary border border-dark form-control form-control-sm my-2 px-0 py-1 d-inline"></div>
-                        <div id="resultadoSuperficieCirculo" class="text-white text-center bg-primary border border-dark form-control form-control-sm my-2 px-0 py-1 d-inline"></div>
-                    </div>
-
-                </form>
-            </div>
-        </div>
-    </div>
-    <span class="atribucion" style="text-align: end; height: 1.5rem;">
-        <a href='https://www.freepik.es/vectores/fondo' style="text-decoration: none;
-        color: black;
-        margin: auto;
-        ">Vector de Fondo creado por pikisuperstar - www.freepik.es</a>
-    </span>
-
-    <!-- Mi JS-->
-    <script src="./funcionesFiguras.js"></script>
-    <!-- Popper-->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-  </body>
+    <section>
+        <nav>
+            <ol>
+                <li>
+                    <a href="/figuras.html">Taller 1</a>
+                </li>
+                <li>
+                    <a href="/retoClase13.html">Taller 2</a>
+                </li>
+                <li>
+                    <a href="/promedio.html">Taller 3a</a>
+                </li>
+                <li>
+                    <a href="/mediana.html">Taller 3b</a>
+                </li>
+                <li>
+                    <a href="/moda.html">Taller 3c</a>
+                </li>
+                <li>
+                    <a href="/whereismymoney.html"> Taller 4</a>
+                </li>
+            </ol>
+        </nav>
+    </section>
+    
+</body>
 </html>
